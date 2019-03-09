@@ -8,3 +8,6 @@ A Java application that reads a file with students’ grades and generates its h
 ### Setup
 
 Clone the repository and built the application using Maven.
+
+### Execution
+Once built, go to the target file and run the jar-with-dependencies .jar, from the command line, including an argument that dictates the location of the file that contains the grades.

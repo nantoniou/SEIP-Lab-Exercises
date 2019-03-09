@@ -1,6 +1,3 @@
-/**
- * 
- */
 package gradeshistogram;
 
 import java.io.BufferedReader;
@@ -18,12 +15,17 @@ import org.jfree.chart.ChartFactory;
 import org.jfree.chart.ChartFrame;
 
 /**
+ * Class that is responsible for reading grades from a user's file and making a
+ * graph with them.
+ * 
  * @author Nick
  *
  */
 public class HistogramGenerator {
 
 	/**
+	 * Main method that reads the grades.
+	 * 
 	 * @param args
 	 */
 	public static void main(String[] args) {
@@ -40,17 +42,22 @@ public class HistogramGenerator {
 			e.printStackTrace();
 		} finally {
 			if (br != null) {
-		        try {
-		            br.close();
-		        } catch (IOException e) {
-		            e.printStackTrace();
-		        }
-		    }
+				try {
+					br.close();
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+			}
 		}
 		generateHistogram(grades);
 
 	}
 
+	/**
+	 * Method used to create the graph.
+	 * 
+	 * @param grades
+	 */
 	private static void generateHistogram(List<Integer> grades) {
 		XYSeriesCollection dataset = new XYSeriesCollection();
 		XYSeries data = new XYSeries("random values");
@@ -62,7 +69,7 @@ public class HistogramGenerator {
 		boolean legend = false;
 		boolean tooltips = false;
 		boolean urls = false;
-		
+
 		JFreeChart chart = ChartFactory.createXYLineChart("Chart title", "x_axis title", "y_axis_title", dataset,
 				PlotOrientation.VERTICAL, legend, tooltips, urls);
 		ChartFrame frame = new ChartFrame("First", chart);

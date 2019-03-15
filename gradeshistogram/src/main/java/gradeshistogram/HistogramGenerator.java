@@ -4,8 +4,6 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.LinkedList;
-import java.util.List;
 
 import org.jfree.chart.JFreeChart;
 import org.jfree.chart.plot.PlotOrientation;
@@ -31,12 +29,12 @@ public class HistogramGenerator {
 	public static void main(String[] args) {
 		File file = new File(args[0]);
 		String grade;
-		List<Integer> grades = new LinkedList<Integer>();
 		BufferedReader br = null;
+		int[] gradesArray = new int[11];
 		try {
 			br = new BufferedReader(new FileReader(file));
 			while ((grade = br.readLine()) != null) {
-				grades.add(Integer.parseInt(grade));
+				gradesArray[Integer.parseInt(grade)]++;
 			}
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -49,7 +47,7 @@ public class HistogramGenerator {
 				}
 			}
 		}
-		generateHistogram(grades);
+		generateHistogram(gradesArray);
 
 	}
 
@@ -58,11 +56,11 @@ public class HistogramGenerator {
 	 * 
 	 * @param grades
 	 */
-	private static void generateHistogram(List<Integer> grades) {
+	private static void generateHistogram(int[] grades) {
 		XYSeriesCollection dataset = new XYSeriesCollection();
-		XYSeries data = new XYSeries("random values");
-		for (int i = 0; i < grades.size(); i++) {
-			data.add(i, grades.get(i));
+		XYSeries data = new XYSeries("grades");
+		for (int i = 0; i < grades.length; i++) {
+			data.add(i, grades[i]);
 		}
 		dataset.addSeries(data);
 
@@ -70,9 +68,9 @@ public class HistogramGenerator {
 		boolean tooltips = false;
 		boolean urls = false;
 
-		JFreeChart chart = ChartFactory.createXYLineChart("Chart title", "x_axis title", "y_axis_title", dataset,
+		JFreeChart chart = ChartFactory.createXYLineChart("Grades frequency", "grades", "frequency", dataset,
 				PlotOrientation.VERTICAL, legend, tooltips, urls);
-		ChartFrame frame = new ChartFrame("First", chart);
+		ChartFrame frame = new ChartFrame("Frame", chart);
 		frame.pack();
 		frame.setVisible(true);
 	}

@@ -11,5 +11,6 @@
   <description>A maven project for the 2019 Seip exercises</description>
   <modules>
   	<module>gradeshistogram</module>
+  	<module>MetricsCalculator</module>
   </modules>
 </project>

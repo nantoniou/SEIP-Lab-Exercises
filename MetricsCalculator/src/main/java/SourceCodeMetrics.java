@@ -10,7 +10,7 @@ public interface SourceCodeMetrics {
 	/**
 	 * Public method used to calculate the metrics
 	 * @param code, a List of lines of the source code
-	 * @return a list og Integers with the values of the metrics calculated
+	 * @return an array of 3 Integers with the values of the metrics calculated
 	 */
-	public List<Integer> calculateMetrics(List<String> code);
+	public int[] calculateMetrics(List<String> code);
 }

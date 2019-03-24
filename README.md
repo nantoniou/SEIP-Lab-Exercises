@@ -5,3 +5,8 @@ Repository used for the "Software engineering in practise" course's lab exercise
 
 A Java application that reads a file with students’ grades and generates its histogram, using [JFreeChart](https://mvnrepository.com/artifact/org.jfree/jfreechart)
 More info [here](./gradeshistogram/README.md)
+
+## 2nd exercise
+
+A Java application that analyzes a Java source code file and calculates code level metrics; namely the lines of code, the number of classes and the number of methods, which then writes to a csv file named `metrics.csv`.
+More info [here](./MetricsCalculator/README.md)

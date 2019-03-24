@@ -7,8 +7,21 @@ import java.io.PrintWriter;
 import java.util.LinkedList;
 import java.util.List;
 
+/**
+ * Utility class used to read from a text file and write in a text file
+ * 
+ * @author Nick
+ *
+ */
 public final class UtilityIO {
 
+	/**
+	 * Method used to read the text from a file
+	 * 
+	 * @param path,
+	 *            the path of the file to read
+	 * @return a List of the lines of the text file that is read
+	 */
 	public List<String> readFile(String path) {
 		File file = new File(path);
 		String line;
@@ -33,19 +46,21 @@ public final class UtilityIO {
 		return lines;
 	}
 
-	public void writeFile(String path, List<String> lines) {
+	/**
+	 * 
+	 * @param path,
+	 *            the path of the file to read
+	 * @param lines,
+	 *            a List of the lines that are to be written in the file
+	 */
+	public void writeFile(String path, List<String> metrics) {
 		PrintWriter writer = null;
 		try {
-			writer = new PrintWriter(new File("metrics.csv"));
-			StringBuilder sb = new StringBuilder();
-			sb.append(lines.get(0));
-			sb.append(',');
-			sb.append(lines.get(1));
-			sb.append(',');
-			sb.append(lines.get(2));
-
-			writer.write(sb.toString());
-
+			writer = new PrintWriter(new File("./metrics.csv"));
+			for (String line: metrics) {
+				writer.write(line);
+				writer.write(System.lineSeparator());
+			}
 		} catch (FileNotFoundException e) {
 			System.out.println(e.getMessage());
 		} finally {

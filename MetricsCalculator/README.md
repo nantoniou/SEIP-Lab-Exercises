@@ -11,3 +11,7 @@ Note: this application was tested with Java version 1.8 and maven version 3.6.0.
 ## Execution
 Once built, go to the target folder and run the jar, from the command line, including an argument that dictates the location of the file that contains the source code and an argument for the type of string analysis you want to be used (either `string` for string comparison, or `regex` for comparison using regular expressions)
 For example `java -jar MetricsCalculator-0.0.1-SNAPSHOT.jar sourceCode.java regex`
+
+## Class diagram of the application
+
+![Class diagram](../images/class_diagram.png)

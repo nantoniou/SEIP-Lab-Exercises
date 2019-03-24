@@ -1,6 +1,9 @@
 import java.util.List;
 
 /**
+ * Class implementation of SourceCodeMetrics, that finds the metrics using
+ * string comparison
+ * 
  * @author Nick
  *
  */

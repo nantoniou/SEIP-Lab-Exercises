@@ -47,7 +47,7 @@ public final class UtilityIO {
 	}
 
 	/**
-	 * 
+	 * Writes the lines of the list in a file named metrics.csv, in the path and name specified
 	 * @param path,
 	 *            the path of the file to read
 	 * @param lines,
@@ -56,7 +56,7 @@ public final class UtilityIO {
 	public void writeFile(String path, List<String> metrics) {
 		PrintWriter writer = null;
 		try {
-			writer = new PrintWriter(new File("./metrics.csv"));
+			writer = new PrintWriter(new File(path));
 			for (String line: metrics) {
 				writer.write(line);
 				writer.write(System.lineSeparator());

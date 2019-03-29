@@ -16,8 +16,7 @@ public class MetricsCalculation {
 	 * @return
 	 */
 	public List<String> readSourceCode(String path) {
-		UtilityIO io = new UtilityIO();
-		List<String> lines = io.readFile(path);
+		List<String> lines = UtilityIO.readFile(path);
 		return lines;
 	}
 
@@ -45,11 +44,10 @@ public class MetricsCalculation {
 	 *            integer array with the metrics to be written
 	 */
 	public void writeToFile(String path, int[] metrics) {
-		UtilityIO io = new UtilityIO();
 		List<String> metricsLine = new LinkedList<String>();
 		metricsLine.add("loc,noc,nom");
 		metricsLine
 				.add(String.valueOf(metrics[0]) + "," + String.valueOf(metrics[1]) + "," + String.valueOf(metrics[2]));
-		io.writeFile(path, metricsLine);
+		UtilityIO.writeFile(path, metricsLine);
 	}
 }

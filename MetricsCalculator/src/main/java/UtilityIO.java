@@ -22,7 +22,7 @@ public final class UtilityIO {
 	 *            the path of the file to read
 	 * @return a List of the lines of the text file that is read
 	 */
-	public List<String> readFile(String path) {
+	public static List<String> readFile(String path) {
 		File file = new File(path);
 		String line;
 		List<String> lines = new LinkedList<String>();
@@ -53,7 +53,7 @@ public final class UtilityIO {
 	 * @param lines,
 	 *            a List of the lines that are to be written in the file
 	 */
-	public void writeFile(String path, List<String> metrics) {
+	public static void writeFile(String path, List<String> metrics) {
 		PrintWriter writer = null;
 		try {
 			writer = new PrintWriter(new File(path));

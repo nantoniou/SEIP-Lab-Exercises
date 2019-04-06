@@ -1,6 +1,8 @@
 import java.util.LinkedList;
 import java.util.List;
 
+import SourceCodeMetrics.MetricsCalculation;
+
 /**
  * Class used to test the Metrics calculation module
  * @author Nick

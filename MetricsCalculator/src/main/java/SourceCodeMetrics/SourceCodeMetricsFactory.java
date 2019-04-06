@@ -1,3 +1,5 @@
+package SourceCodeMetrics;
+
 /**
  * Factory class, used to create SourceCodeMetrics objects, depending on the type the user wants
  * @author Nick

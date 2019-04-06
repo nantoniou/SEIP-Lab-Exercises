@@ -1,16 +1,25 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
 
-  <groupId>gr.aueb.dmst</groupId>
-  <artifactId>seip2019</artifactId>
+	<groupId>gr.aueb.dmst</groupId>
+	<artifactId>seip2019</artifactId>
 
-  <version>0.0.1-SNAPSHOT</version>
-  <packaging>pom</packaging>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>pom</packaging>
 
-  <name>Seip_Exercises</name>
-  <description>A maven project for the 2019 Seip exercises</description>
-  <modules>
-  	<module>gradeshistogram</module>
-  	<module>MetricsCalculator</module>
-  </modules>
+	<properties>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+
+	<name>Seip_Exercises</name>
+	<description>A maven project for the 2019 Seip exercises</description>
+	<modules>
+		<module>gradeshistogram</module>
+		<module>MetricsCalculator</module>
+		<module>unittesting</module>
+	</modules>
 </project>

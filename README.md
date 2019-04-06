@@ -10,3 +10,8 @@ More info [here](./gradeshistogram/README.md)
 
 A Java application that analyzes a Java source code file and calculates code level metrics; namely the lines of code, the number of classes and the number of methods, which then writes to a csv file named `metrics.csv`.
 More info [here](./MetricsCalculator/README.md)
+
+## 3rd exercise
+
+A Java application that is used to perform some operations to an array or an integer, from a specified input file. Used to get familiar with unit testing.
+More info [here](./unittesting/README.md)

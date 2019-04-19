@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.com/nantoniou/SEIP-Lab-Exercises.svg?token=ddwC3QTELdcJYBDbswYH&branch=master)](https://travis-ci.com/nantoniou/SEIP-Lab-Exercises)
+
 # SEIP-Lab-Exercises
 Repository used for the "Software engineering in practise" course's lab exercises, monitored and graded by @AntonisGkortzis.
 

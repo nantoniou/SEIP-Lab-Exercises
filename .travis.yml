@@ -6,7 +6,7 @@ branches:
 only:
 - master
 script:
-- mvn clean package jacoco:report
+- mvn clean package jacoco:report-aggregate
 after_success:
 - export CODECOV_TOKEN="92f0c700-7f03-4da4-ba82-7e2d0f6d56b4"
 - bash <(curl -s https://codecov.io/bash)

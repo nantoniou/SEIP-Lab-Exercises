@@ -63,13 +63,24 @@ public class IntegerOperationsTest {
 
 	/**
 	 * Method used to test the behaviour of the IntegerOperations.add method
-	 * when passing a negative number as input.
+	 * when passing a negative number as input, as a first argument.
 	 */
 	@Test
-	public void testAddNegative() {
+	public void testAddNegativeX() {
 		thrown.expect(IllegalArgumentException.class);
 		thrown.expectMessage("Input numbers should be positive.");
 		intOp.add(-1, 1);
+	}
+	
+	/**
+	 * Method used to test the behaviour of the IntegerOperations.add method
+	 * when passing a negative number as input, as a second argument.
+	 */
+	@Test
+	public void testAddNegativeY() {
+		thrown.expect(IllegalArgumentException.class);
+		thrown.expectMessage("Input numbers should be positive.");
+		intOp.add(1, -1);
 	}
 	
 	/**
